@@ -1,34 +1,58 @@
-import "./Header.css"
+import { useState } from "react"
 import Logo from "../../../assets/logo-header.svg"
-import {Search, ShoppingCart} from "lucide-react"
+import {Menu, Search, ShoppingCart} from "lucide-react"
+import "./Header.css"
 
 
 function Header() {
-  return (
+    const [searchOpen, setSearchOpen] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false)
+    
+    return (
+
+
     <header>
         <div id="header">
+
+            <button
+                type="button"
+                id="btnMenu"
+                aria-label="Abrir menu"
+                aria-expanded={menuOpen}
+                onClick={() => setMenuOpen(!menuOpen)}>
+                    <Menu />
+            </button>
+
             <img src= {Logo} alt="Logo da Página" id="logo" />
             
-            <form action="" id="form" >
+            <form action="" id="form" className={searchOpen ? "search-open" : ""} onSubmit={(e) => e.preventDefault()}>
                 <input type="text" id="search" placeholder="Pesquisar produtos"/>
-                <button type="button" id="btnSearch"><Search color="#999999" /></button>
+                <button type="button" id="btnSearch"><Search color="#999999" aria-label="Pesquisar produtos" /></button>
             </form>
             
             <div id="userActions">
-                <button type="button" id="btnRegister">Cadastre-se</button>
-                <button type="button" id="btnLogin">Entrar</button>
-                <button type="button" id="btnCart"><ShoppingCart color="#c92071" />
+                <button
+                    type="button"
+                    id="btnSearchMobile"
+                    aria-label="Abrir pesquisa"
+                    aria-expanded={searchOpen}
+                    onClick={() => setSearchOpen(!searchOpen)}>
+                        <Search />
+                </button>
+                <button type="button" id="btnRegister" aria-label="Cadastrar-se">Cadastre-se</button>
+                <button type="button" id="btnLogin" aria-label="Entrar">Entrar</button>
+                <button type="button" id="btnCart" aria-label="Carrinho de Compras"><ShoppingCart color="#c92071" />
                     <span id="cartCount">2</span>
                 </button>
             </div>
         </div>
             
-        <nav>
+        <nav className={menuOpen ? "nav-open" : ""}>
             <ul>
-                <li>Home</li>
-                <li>Produtos</li>
-                <li>Categorias</li>
-                <li>Meus Pedidos</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Produtos</a></li>
+                <li><a href="/">Categorias</a></li>
+                <li><a href="/">Meus Pedidos</a></li>
             </ul>
         </nav>
     </header>

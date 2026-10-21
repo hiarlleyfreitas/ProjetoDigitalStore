@@ -1,6 +1,10 @@
+import "./Footer.css"
+
 function Footer() {
   return (
-    <h1>Rodapé</h1>
+    <footer>
+      {/* <h1>Rodapé</h1> */}
+    </footer>
   )
 }
 

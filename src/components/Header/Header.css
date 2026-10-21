@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: "Inter", sans-serif;
 }
 
 header{
@@ -32,10 +33,15 @@ nav li{
     cursor: pointer;
 }
 
-nav li:first-child{
+nav li:first-child a{
     color: #c92071;
     font-weight: 700;
     border-bottom: 2px solid #c92071;
+}
+
+a{
+    text-decoration: none;
+    color: #474747;
 }
 
 #header{
@@ -135,6 +141,11 @@ nav li:first-child{
     cursor: pointer;
 }
 
+/* Botões exclusivos do mobile */
+#btnMenu, #btnSearchMobile{
+    display: none;
+}
+
 #cartCount{
     position: absolute;
     width: 17px;
@@ -153,4 +164,87 @@ nav li:first-child{
     bottom: 15px;
 
     border-radius: 50%;
+}
+
+@media (max-width: 768px){
+    #header{
+        display: grid;
+        grid-template-columns: 40px 1fr auto;
+        align-items: center;
+        gap: 12px;
+
+        padding: 20px 16px;
+        box-sizing: border-box;
+    }
+
+    #logo{
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: center;
+
+        width: 150px;
+        max-width: 100%;
+    }
+
+    #form{
+        display: none;
+        grid-column: 1 / -1;
+        width: 100%;
+        min-width: 0;
+    }
+
+    #form.search-open{
+        display: block;
+    }
+
+    #search{
+        width: 100%;
+        box-sizing: border-box;
+        padding-right: 44px;
+    }
+
+    #userActions{
+        grid-column: 3;
+        grid-row: 1;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    #btnRegister, #btnLogin{
+        display: none;
+    }
+
+    #btnMenu, #btnSearchMobile{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        color: #474747;
+        cursor: pointer;
+    }
+
+    #btnMenu{
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #btnCart{
+        flex-shrink: 0;
+    }
+
+    nav{
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        gap: 16px;
+        padding-top: 8px;
+    }
 }
