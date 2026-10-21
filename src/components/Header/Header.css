@@ -1,3 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 header{
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+nav{
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+nav ul{
     display: flex;
+    align-items: center;
+    gap: 40px;
+
+    margin: 0;
+    padding: 12px 0 0;
+    list-style: none;
+}
+
+nav li{
+    padding-bottom: 8px;
+    color: #474747;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+}
+
+nav li:first-child{
+    color: #c92071;
+    font-weight: 700;
+    border-bottom: 2px solid #c92071;
+}
+
+#header{
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 28px 0 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+#logo{
+    width: 208px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+#form{
+    flex: 1;
+    min-width: 0;
+    position: relative;
+}
+
+#search{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+
+    padding: 0 20px;
+    padding-right: 44px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+
+    background-color: #F5F5F5;
+    color: #474747;
+    font-size: 14px;
+}
+
+#search::placeholder{
+    color: #999999;
+}
+
+#userActions{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+}
+
+#btnRegister{
+    padding: 0;
+    border: none;
+    background: none;
+
+    color: #474747;
+    text-decoration: underline;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#btnLogin{
+    min-width: 93px;
+    height: 33px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+
+    background-color: #c92071;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#btnSearch{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#btnCart{
+    width: 33px;
+    height: 29px;
+    position: relative;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+#cartCount{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: #c92071;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFFFFF;
+    
+    left: 20px;
+    bottom: 15px;
+
+    border-radius: 50%;
 }

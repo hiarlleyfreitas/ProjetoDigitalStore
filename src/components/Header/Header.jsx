@@ -1,14 +1,28 @@
 import "./Header.css"
+import Logo from "../../../assets/logo-header.svg"
+import {Search, ShoppingCart} from "lucide-react"
+
 
 function Header() {
   return (
     <header>
-        <img src=".\assets\logo-header.svg" alt="Logo da Página" id="logo" />
-        <form action="submit" id="form" >
-            <input type="text" id="search" placeholder="Pesquisar produtos"/>
-        </form>
-        <button>Cadastre-se</button>
-        <button>Entrar</button>
+        <div id="header">
+            <img src= {Logo} alt="Logo da Página" id="logo" />
+            
+            <form action="" id="form" >
+                <input type="text" id="search" placeholder="Pesquisar produtos"/>
+                <button type="button" id="btnSearch"><Search color="#999999" /></button>
+            </form>
+            
+            <div id="userActions">
+                <button type="button" id="btnRegister">Cadastre-se</button>
+                <button type="button" id="btnLogin">Entrar</button>
+                <button type="button" id="btnCart"><ShoppingCart color="#c92071" />
+                    <span id="cartCount">2</span>
+                </button>
+            </div>
+        </div>
+            
         <nav>
             <ul>
                 <li>Home</li>
