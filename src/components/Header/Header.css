@@ -238,8 +238,13 @@ a{
     }
 
     nav{
+        display: none;
         padding: 0 16px;
         box-sizing: border-box;
+    }
+
+    nav.nav-open{
+        display: block;
     }
 
     nav ul{
