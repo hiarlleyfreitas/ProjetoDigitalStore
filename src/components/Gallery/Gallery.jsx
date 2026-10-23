@@ -1,8 +1,10 @@
+import './Gallery.css'
+
 function Gallery() {
   return (
     <section id="gallery">
         <div id="galleryContent">
-            <span id="galleryContent">
+            <span id="gallerySubtitle">
                 Melhores ofertas personalizadas
             </span>
 
@@ -20,7 +22,7 @@ function Gallery() {
         </div>
         
         <div id="galleryImage">
-            <img src="" alt="Tênis Nike em destaque na promoção" srcset="" />
+            <img src="../../../public/product-image-6.png" alt="Tênis Nike em destaque na promoção" srcset="" />
         </div>
 
         <div id="galleryIndicators">
