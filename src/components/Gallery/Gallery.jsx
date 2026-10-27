@@ -1,19 +1,54 @@
 import './Gallery.css'
+import { useState } from 'react'
+
+const slides = [
+    {
+        subtitle: "Melhores ofertas personalizadas",
+        title: "Queima de estoque Nike",
+        description: "Conquiste o seu estilo com ofertas especiais.",
+        image: "../../../public/produc-image-1.jpeg",
+        imageAlt: "Tênis Nike em destaque",
+    },
+    {
+        subtitle: "Ofertas especiais",
+        title: "Estilo para todos os momentos",
+        description: "Encontre protudos que combinam com você e aproveite as ofertas.",
+        image: "../../../public/produc-image-2.jpeg",
+    },
+    {
+        subtitle: "Novidades na loja",
+        title: "Descubra seu próximo favorito",
+        description: "Explore nossa seleção de produtos e renove seu estilo.",
+        image: "../../../public/produc-image-3.jpeg",
+        imageAlt: "Novos produtos em destaque",
+    },
+    {
+        subtitle: "Não perca essa oportunidade",
+        title: "Ofertas que combinam com você",
+        description: "Confira os destaques da Digital Store.",
+        image: "../../../public/produc-image-4.jpeg",
+        imageAlt: "Produtos em promoção",
+    }
+]
 
 function Gallery() {
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const slide = slides[currentSlide]
+
+
   return (
     <section id="gallery">
         <div id="galleryContent">
             <span id="gallerySubtitle">
-                Melhores ofertas personalizadas
+                {slide.subtitle}
             </span>
 
             <h1>
-                Queima de estoque Nike
+                {slide.title}
             </h1>
 
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellat itaque, nostrum tempora incidunt dolore totam, suscipit error nisi iure consequuntur perspiciatis explicabo facere facilis, eaque culpa! Quisquam, nobis repellendus?
+                {slide.description}
             </p>
 
             <button type="button" id="galleryButton">
@@ -22,41 +57,25 @@ function Gallery() {
         </div>
         
         <div id="galleryImage">
-            <img src="../../../public/product-image-6.png" alt="Tênis Nike em destaque na promoção" srcset="" />
+            <img
+                src={slide.image}
+                alt={slide.imageAlt}
+            />
         </div>
 
         <div id="galleryIndicators">
-            <button 
-                type="button"
-                className="galleryIndicator active"
-                aria-label="Mostrar slide 1"
-                aria-current="true"
-            >
-
-            </button>
-            <button
-                type="button"
-                className="galleryIndicator"
-                aria-label="Mostrar slide 2"
-            >
-
-            </button>
-
-            <button
-                type="button"
-                className="galleryIndicator"
-                aria-label="Mostrar slide 3"
-            >
-
-            </button>
-
-            <button
-                type="button"
-                className="galleryIndicator"
-                aria-label="Mostrar slide 4"
-            >
-
-            </button>
+            {slides.map((item, index) => (
+                <button
+                    key={item.title}
+                    type='button'
+                    className={`galleryIndicator ${
+                        index === currentSlide ? 'active' : ''
+                    }`}
+                    aria-label={`Mostrar slide ${index + 1}`}
+                    aria-current={index === currentSlide ? 'true' : undefined}
+                    onClick={() => setCurrentSlide(index)}
+                />
+            ))}
         </div>
     </section>
   )
