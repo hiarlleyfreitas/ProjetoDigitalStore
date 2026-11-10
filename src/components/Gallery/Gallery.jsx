@@ -34,7 +34,12 @@ const slides = [
 function Gallery() {
     const [currentSlide, setCurrentSlide] = useState(0)
     const slide = slides[currentSlide]
-
+    const nextSlide = () => {
+        setCurrentSlide((currentSlide + 1) % slides.length)
+    }
+    const previousSlide = () => {
+        setCurrentSlide((currentSlide - 1 + slides.length) % slides.length)
+    }
 
   return (
     <section id="gallery">
@@ -62,6 +67,24 @@ function Gallery() {
                 alt={slide.imageAlt}
             />
         </div>
+
+        <button 
+            type="button"
+            id='galleryPrevious'
+            aria-label='Slide Anterior'
+            onClick={previousSlide}
+        >
+            ‹
+        </button>
+
+        <button 
+            type="button"
+            id='galleryNext'
+            aria-label='Próximo slide'
+            onClick={nextSlide}
+        >
+            ›
+        </button>
 
         <div id="galleryIndicators">
             {slides.map((item, index) => (

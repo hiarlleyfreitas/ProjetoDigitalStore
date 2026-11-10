@@ -66,6 +66,36 @@
     object-fit: contain;
 }
 
+#galleryPrevious, #galleryNext{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgb(255, 255, 255, 0.8);
+    color: #474747;
+    font-size: 28px;
+}
+
+#galleryPrevious{
+    left: 16px;
+    cursor: pointer;
+}
+
+#galleryNext{
+    right: 16px;
+    cursor: pointer;
+}
+
+#galleryPrevious:hover, #galleryNext:hover{
+    background-color: #FFFFFF;
+}
+
 #galleryIndicators{
     position: absolute;
     bottom: 24px;
