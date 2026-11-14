@@ -1,99 +1,171 @@
 #featuredCollections{
-    padding: 40px 20px
+  padding: 40px 20px;
+  background-color: #F9F8FC;
+}
+
+.featuredCollectionsContainer{
+  width: 100%;
+  max-width: 1140px;
+  margin-inline: auto;
 }
 
 #featuredCollections h2{
-    margin-bottom: 20px;
-    font-size: 20px;
-    color: #474747;
+  margin: 20px 0;
+  font-size: 20px;
+  color: #474747;
+  text-align: center;
+}
+
+.featuredCategories{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 40px auto 40px;
+}
+
+.featuredCategory{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 120px;
+  min-height: 120px;
+  padding: 16px 12px;
+  border: 1px solid #F5F5F5;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #474747;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.featuredCategory:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+}
+
+.featuredCategory:focus-visible{
+  outline: 2px solid #C92071;
+  outline-offset: 3px;
+}
+
+.featuredCategory.isSelected{
+  border-color: #C92071;
+  box-shadow: 0 2px 10px rgb(201 32 113 / 14%);
+}
+
+.featuredCategoryIcon{
+  width: 44px;
+  height: 44px;
+  color: #C92071;
+  stroke-width: 1.7;
 }
 
 #collectionsList{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (max-width: 700px){
+  .featuredCategories{
+    justify-content: flex-start;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 4px 2px 12px;
+  }
+
+  .featuredCategory{
+    flex: 0 0 104px;
+    width: 104px;
+    min-height: 108px;
+  }
 }
 
 .collectionCard{
-    position: relative;
-    
-    display: flex;
-    align-items: center;
+  position: relative;
 
-    flex: 1;
-    max-width: 405px;
-    min-width: 180px;
-    padding: 16px;
+  display: flex;
+  align-items: center;
 
-    box-sizing: border-box;
-    border-radius: 4px;
-    background-color: #E7ECF8;
+  flex: 1;
+  max-width: 405px;
+  min-width: 180px;
+  padding: 16px;
 
-    overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #E7ECF8;
+
+  overflow: hidden;
 }
 
 .collectionDiscount {
-    position: absolute;
-    top: 12px;
-    left: 16px;
+  /* position: absolute; */
+  /* top: 12px; */
+  /* left: 16px; */
 
-    padding: 4px 8px;
-    border-radius: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
 
-    background-color: #E7FF86;
-    color: #474747;
-    font-size: 10px;
-    font-weight: 700;
+  background-color: #E7FF86;
+  color: #474747;
+  font-size: 10px;
+  font-weight: 700;
 }
 
 .collectionContent{
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    width: 55%;
+  width: 55%;
 }
 
 .collectionContent h3{
-    margin: 0 0 12px;
+  margin: 12px 0 12px;
 
-    color: #1F1F1F;
-    font-size: 20px;
-    line-height: 1.2;
+  color: #1F1F1F;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 .collectionContent button{
-    padding: 7px 18px;
-    border: none;
-    border-radius: 4px;
+  padding: 7px 18px;
+  border: none;
+  border-radius: 4px;
 
-    background-color: #FFFFFF;
-    color: #C92071;
-    font-size: 12px;
-    font-weight: 700;
+  background-color: #FFFFFF;
+  color: #C92071;
+  font-size: 12px;
+  font-weight: 700;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .collectionImage{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 
-    width: 65%;
-    height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  width: 65%;
+  height: 100%;
 }
 
 .collectionImage img{
-    display: block;
-    
-    width: 120%;
-    max-height: 120%;
-    height: auto;
-    
-    object-fit: contain;
-    object-position: right bottom;
+  display: block;
+
+  width: 120%;
+  max-height: 120%;
+  height: auto;
+
+  object-fit: contain;
+  object-position: right bottom;
 }
