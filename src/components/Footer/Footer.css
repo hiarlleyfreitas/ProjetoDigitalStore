@@ -6,7 +6,7 @@
 
 .footerContainer{
   width: 100%;
-  max-width: 1140px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   padding: 40px 54px 16px;
   box-sizing: border-box;
@@ -15,7 +15,7 @@
 .footerColumns{
   display: grid;
   grid-template-columns: minmax(220px, 2fr) minmax(100px, 0.8fr) minmax(100px, 0.8fr) minmax(140px, 1fr);
-  gap: 38px;
+  gap: 32px;
   padding-bottom: 30px;
 }
 
@@ -25,7 +25,7 @@
 
 .footerLogo{
   display: block;
-  width: 140px;
+  width: 160px;
   height: auto;
   margin-bottom: 14px;
 }
@@ -48,14 +48,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 14px;
-  height: 18px;
+  width: 16px;
+  height: 20px;
 }
 
 .footerSocialLinks img{
   display: block;
-  max-width: 14px;
-  max-height: 14px;
+  max-width: 16px;
+  max-height: 16px;
 }
 
 .footerLinkColumn,
@@ -134,25 +134,52 @@
 
 @media (max-width: 760px){
   .footerContainer{
-    padding: 36px 24px 16px;
+    padding: 36px var(--content-gutter) 16px;
   }
 
   .footerColumns{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px 24px;
+    gap: 32px 12px;
   }
 
   .footerBrand{
     grid-column: 1 / -1;
   }
+
+  .siteFooter nav.footerLinkColumn{
+    display: block;
+    width: auto;
+    min-width: 0;
+  }
+
+  .footerContact{
+    grid-column: 1 / -1;
+  }
+
+  .footerContact address{
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 420px){
   .footerContainer{
-    padding-inline: 20px;
+    padding-inline: var(--content-gutter);
   }
 
   .footerColumns{
-    gap: 28px 18px;
+    gap: 28px 12px;
+  }
+
+  .footerLogo{
+    width: 120px;
+  }
+
+  .footerBrand p{
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .footerCopyright{
+    margin-inline: 4px;
   }
 }

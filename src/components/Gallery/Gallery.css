@@ -6,7 +6,7 @@
 
   width: 100%;
   min-height: 560px;
-  padding: 40px max(calc((100% - 1140px) / 2), 20px);
+  padding: 40px max(calc((100% - var(--content-max-width)) / 2), var(--content-gutter));
   box-sizing: border-box;
 
   background-color: #f5f5f5;
@@ -127,7 +127,7 @@
     flex-direction: column;
     justify-content: flex-start;
     min-width: auto;
-    padding: 24px 20px 40px;
+    padding: 24px var(--content-gutter) 40px;
   }
 
   #galleryImage{

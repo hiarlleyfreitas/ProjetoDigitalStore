@@ -35,7 +35,7 @@ function FeaturedCollections() {
           ))}
         </div>
 
-        <h2>Coleções em destaque</h2>
+        <h2>Categorias</h2>
         <div className="featuredCategories" aria-label="Selecione uma categoria">
           {categories.map(({ name, Icon }) => (
             <button

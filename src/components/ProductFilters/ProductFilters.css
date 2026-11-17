@@ -1,0 +1,76 @@
+.productsFilters{
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.productsFilters > h1{
+  margin: 0 0 20px;
+  color: #474747;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.productsFilterGroup{
+  margin: 0;
+  padding: 16px 0 0;
+  border: 0;
+  border-top: 1px solid #DDDDDD;
+}
+
+.productsFilterGroup + .productsFilterGroup{
+  margin-top: 16px;
+}
+
+.productsFilterGroup legend{
+  padding-top: 16px;
+  color: #474747;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.productsFilterOptions{
+  display: grid;
+  gap: 12px;
+  padding-top: 12px;
+}
+
+.productsFilterOption{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #474747;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.productsFilterOption input{
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #C92071;
+}
+
+.productsFilterOption input:focus-visible{
+  outline: 2px solid #C92071;
+  outline-offset: 2px;
+}
+
+@media (max-width: 760px){
+  .productsFilters{
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .productsFilters.isOpen{
+    display: block;
+  }
+}
+
+@media (max-width: 420px){
+  .productsFilters{
+    padding: 16px;
+  }
+}

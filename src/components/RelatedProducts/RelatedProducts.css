@@ -1,0 +1,119 @@
+.productRelated{
+  margin-top: 34px;
+}
+
+.productRelatedHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.productRelatedHeader h2{
+  margin: 0;
+  color: #474747;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.productRelatedHeader a{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #C92071;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.productRelatedHeader a span{
+  font-size: 16px;
+}
+
+.productRelatedGrid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.productRelatedCard{
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.productRelatedCard:focus-visible{
+  outline: 2px solid #C92071;
+  outline-offset: 3px;
+}
+
+.productRelatedImage{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.productRelatedImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productRelatedImage > span{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  padding: 4px 6px;
+  border-radius: 8px;
+  background-color: #E7FF86;
+  color: #474747;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.productRelatedCard > p{
+  margin: 8px 0 2px;
+  color: #8F8F8F;
+  font-size: 8px;
+}
+
+.productRelatedCard h3{
+  overflow: hidden;
+  margin: 0;
+  color: #474747;
+  font-size: 11px;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.productRelatedPrices{
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-top: 3px;
+  font-size: 10px;
+}
+
+.productRelatedPrices del{color: #8F8F8F;}
+.productRelatedPrices strong{color: #1F1F1F;}
+
+@media (max-width: 760px){
+  .productRelated{
+    margin-top: 28px;
+  }
+
+  .productRelatedGrid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+
+  .productRelatedCard:nth-child(n + 3){
+    display: none;
+  }
+}

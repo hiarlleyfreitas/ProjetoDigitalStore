@@ -1,4 +1,5 @@
 import popularItems from "../../data/popularItems"
+import { Link } from "react-router-dom"
 import "./PopularItens.css"
 
 function PopularItens() {
@@ -15,19 +16,21 @@ function PopularItens() {
         <div className="popularItemsGrid" id="popularItemsGrid">
           {popularItems.map((item) => (
             <article className="popularItem" key={item.id}>
-              <div className="popularItemImage">
-                {item.discount && (
-                  <span className="popularItemDiscount">{item.discount}</span>
-                )}
-                <img src={item.image} alt={item.title} />
-              </div>
+              <Link className="popularItemLink" to={`/produtos/${item.id}`}>
+                <div className="popularItemImage">
+                  {item.discount && (
+                    <span className="popularItemDiscount">{item.discount}</span>
+                  )}
+                  <img src={item.image} alt={item.title} />
+                </div>
 
-              <p className="popularItemCategory">{item.category}</p>
-              <h3 className="popularItemTitle">{item.title}</h3>
-              <p className="popularItemPrices">
-                <del>{item.oldPrice}</del>
-                <strong>{item.price}</strong>
-              </p>
+                <p className="popularItemCategory">{item.category}</p>
+                <h3 className="popularItemTitle">{item.title}</h3>
+                <p className="popularItemPrices">
+                  <del>{item.oldPrice}</del>
+                  <strong>{item.price}</strong>
+                </p>
+              </Link>
             </article>
           ))}
         </div>

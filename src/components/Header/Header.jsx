@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { NavLink } from "react-router-dom"
 import Logo from "../../../assets/logo-header.svg"
 import { Menu, Search, ShoppingCart } from "lucide-react"
 import "./Header.css"
@@ -59,8 +60,8 @@ function Header() {
 
       <nav className={menuOpen ? "nav-open" : ""}>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">Produtos</a></li>
+          <li><NavLink to="/" end>Home</NavLink></li>
+          <li><NavLink to="/produtos">Produtos</NavLink></li>
           <li><a href="/">Categorias</a></li>
           <li><a href="/">Meus Pedidos</a></li>
         </ul>

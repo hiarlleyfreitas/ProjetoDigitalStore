@@ -11,7 +11,7 @@ header{
 
 nav{
   width: 100%;
-  max-width: 1140px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
 }
 
@@ -33,7 +33,7 @@ nav li{
   cursor: pointer;
 }
 
-nav li:first-child a{
+nav li a.active{
   color: #c92071;
   font-weight: 700;
   border-bottom: 2px solid #c92071;
@@ -46,7 +46,7 @@ a{
 
 #header{
   width: 100%;
-  max-width: 1140px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   padding: 28px 0 24px;
 
@@ -173,7 +173,7 @@ a{
     align-items: center;
     gap: 12px;
 
-    padding: 20px 16px;
+    padding: 20px var(--content-gutter);
     box-sizing: border-box;
   }
 
@@ -239,7 +239,7 @@ a{
 
   nav{
     display: none;
-    padding: 0 16px;
+    padding: 0 var(--content-gutter);
     box-sizing: border-box;
   }
 

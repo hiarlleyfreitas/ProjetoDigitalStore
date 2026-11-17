@@ -1,5 +1,20 @@
 .sitePage{
+  --content-max-width: 1140px;
+  --content-gutter: 20px;
+
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
+  overflow-x: clip;
+}
+
+html,
+body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root{
+  max-width: 100%;
+  overflow-x: clip;
 }

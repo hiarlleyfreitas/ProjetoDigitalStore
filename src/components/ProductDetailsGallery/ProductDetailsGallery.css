@@ -1,0 +1,107 @@
+.productDetailsGallery{
+  min-width: 0;
+}
+
+.productDetailsImage{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1.18 / 1;
+  overflow: hidden;
+  background-color: #E5E5FF;
+}
+
+.productDetailsImage > img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.productDetailsDiscount{
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 5px 8px;
+  border-radius: 4px;
+  background-color: #E7FF86;
+  color: #474747;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.productDetailsGalleryArrow{
+  position: absolute;
+  top: 50%;
+  display: grid;
+  width: 32px;
+  height: 40px;
+  padding: 0;
+  place-items: center;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: #474747;
+  cursor: pointer;
+}
+
+.productDetailsGalleryArrow svg{
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
+}
+
+.productDetailsGalleryArrow:focus-visible,
+.productDetailsThumbnail:focus-visible{
+  outline: 2px solid #C92071;
+  outline-offset: 2px;
+}
+
+.productDetailsGalleryArrow.isPrevious{left: 2px;}
+.productDetailsGalleryArrow.isNext{right: 2px;}
+
+.productDetailsGalleryArrow:focus-visible,
+.productDetailsThumbnail:focus-visible{
+  outline: 2px solid #C92071;
+  outline-offset: 2px;
+}
+
+.productDetailsThumbnails{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.productDetailsThumbnail{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  aspect-ratio: 1.2 / 1;
+  padding: 4px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #FCE5A7;
+  cursor: pointer;
+}
+
+.productDetailsThumbnail:nth-child(2){background-color: #FCE5A7;}
+.productDetailsThumbnail:nth-child(3){background-color: #F7C1C1;}
+.productDetailsThumbnail:nth-child(4){background-color: #D9C89C;}
+.productDetailsThumbnail:nth-child(5){background-color: #E7E1D4;}
+
+.productDetailsThumbnail.isSelected{
+  border-color: #C92071;
+}
+
+.productDetailsThumbnail img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
