@@ -74,8 +74,10 @@ function Footer() {
           <section className="footerContact">
             <h2>Contato</h2>
             <address>
-              Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE,
+              <a href="https://maps.app.goo.gl/NEY1n9rNzHhXYbRe6" target="_blank">
+                Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE,
               60150-161
+              </a>
             </address>
             <a href="tel:+558530513411">(85) 3051-3411</a>
           </section>
