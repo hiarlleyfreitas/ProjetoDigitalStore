@@ -28,7 +28,7 @@ function Footer() {
           <section className="footerBrand" aria-label="Digital Store">
             <img
               className="footerLogo"
-              src="../../../assets/logo-footer.svg"
+              src="/assets/logo-footer.svg"
               alt="Digital Store"
             />
             <p>

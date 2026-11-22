@@ -7,12 +7,12 @@ function SpecialOffer() {
         <div className="specialOfferVisual" aria-hidden="true">
           <img
             className="specialOfferBackground"
-            src="../../../public/ellipse-11.png"
+            src="/ellipse-11.png"
             alt=""
           />
           <img
             className="specialOfferShoe"
-            src="../../../public/laye-1.png"
+            src="/laye-1.png"
             alt=""
           />
         </div>
